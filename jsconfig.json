@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@core": ["src/Components/CoreComponents/index.jsx"],
+      "@layout": ["src/Components/LayoutComponents/index.jsx"]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+/* Block */
+.core-toggle {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+/* Hidden Input */
+.core-toggle__input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider Track */
+.core-toggle__slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #cbd5e1;
+  transition: 0.3s;
+  border-radius: 34px;
+}
+
+/* Slider Knob */
+.core-toggle__slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+/* State: Checked */
+.core-toggle__input:checked + .core-toggle__slider {
+  background-color: #10b981; /* Green when ON */
+}
+
+.core-toggle__input:checked + .core-toggle__slider:before {
+  transform: translateX(14px);
+}
+
+/* State: Disabled */
+.core-toggle--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
